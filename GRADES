@@ -1,0 +1,53 @@
+using System;
+
+namespace quiz2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Double Prelim_Grade;
+            Double Midterm_Grade;
+            Double Final_Grade;
+            Double Average;
+
+            Console.Write("Enter your Prelim grade: ");
+            Prelim_Grade = Convert.ToDouble(Console.ReadLine());
+            Console.Write("Enter your Midterm grade: ");
+            Midterm_Grade = Convert.ToDouble(Console.ReadLine());
+            Console.Write("Enter your Final grade: ");
+            Final_Grade = Convert.ToDouble(Console.ReadLine());
+
+            Average = ((Prelim_Grade + Midterm_Grade + Final_Grade) / (3));
+            Console.Write("Average: {0:F1}", Average);
+            Console.WriteLine("");
+
+            if (Average <= 1.5)
+            {
+                Console.Write("Remark is: Outstanding");
+                Console.ReadLine();
+            }
+            else if (Average <= 2.0)
+            {
+                Console.Write("Remark is: Very Good");
+                Console.ReadLine();
+            }
+            else if (Average <= 2.5)
+            {
+                Console.Write("Remark is: Good");
+                Console.ReadLine();
+            }
+            else if (Average <= 3.0)
+            {
+                Console.Write("Remark is: Fair");
+                Console.ReadLine();
+            }
+            else if (Average >= 3.1)
+            {
+                Console.Write("Remark is: Failed");
+                Console.ReadLine();
+            }
+            Console.ReadKey(true);
+        }
+    }
+}
